@@ -1,6 +1,136 @@
 /* Reset */
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #999;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: white;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+    
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+.large {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.4)
+}
+
+.important {
+    font-size: .8rem;
+    color: rgba(255, 255, 255, 0.4)
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.small {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark {
+    background-color: rgba(255, 255, 255, .1);
+    margin-top: 3rem;
+} 
+
+.dark label {
+    color: rgba(255, 255, 255, .8);
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-align: start;
+    margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+    background-color: rgba(255, 255, 255, .1);
+    border: none;
+    padding: 0.7rem;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 1rem 6rem 1rem;;
+
+}
+
+nav ul {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.background {
+    background-color: #999;
 }
