@@ -17,7 +17,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: #000;
+    background: black;
     color: #999;
 }
 
@@ -83,14 +83,24 @@ img {
 }
 
 .small {
-    width: 50%;
+    width: 40%;
     align-items: center;
     justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
+.small header {
+    line-height: 0.5;
+}
+
+.small h3 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
 .dark {
     background-color: rgba(255, 255, 255, .1);
-    margin-top: 3rem;
+    padding-top: 0.5rem;
 } 
 
 .dark label {
@@ -98,13 +108,13 @@ img {
 }
 
 form div {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 form label {
     display: block;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     letter-spacing: 1px;
     text-align: start;
     margin-bottom: 0.5rem;
@@ -114,23 +124,71 @@ form input,
 form textarea {
     background-color: rgba(255, 255, 255, .1);
     border: none;
-    padding: 0.7rem;
+    padding: 0.5rem;
     width: 100%;
 }
 
-.header {
+.top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem 1rem 6rem 1rem;;
+    margin: 0 1.5rem;
 
 }
 
 nav ul {
     display: flex;
-    gap: 1.3rem;
+    gap: 1.1rem;
 }
 
-.background {
-    background-color: #999;
+.btn {
+    background-color: rgba(255, 255, 255, .1);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: var(--secondary-color)
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.logo-image {
+    margin-top: 2rem;
+}
+
+#title {
+    line-height: 15px;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+#title h2 {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+}
+
+#services h2 {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+#services ul li {
+    text-transform: capitalize;
+    list-style: circle;
+    text-align: start;   
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+
+}
+
+.footer {
+    padding-bottom: 1.5rem;
 }
