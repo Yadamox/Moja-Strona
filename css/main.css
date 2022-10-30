@@ -46,6 +46,7 @@ h3 {
     font-weight: 300;
     font-size: 1.3rem;
     margin: 1rem;
+    line-height: 35px;
 }
 
 h4 {
@@ -64,8 +65,8 @@ p {
 
 .important {
     font-size: .7rem;
-   margin-top: 0.8rem;
-    color: rgba(255, 255, 255, 0.4)
+    margin-top: 0.8rem;
+    color: rgba(255, 255, 255, 0.7)
 }
 
 ul {
@@ -93,6 +94,8 @@ img {
     align-items: center;
     justify-content: center;
     padding-bottom: 2rem;
+    margin-bottom: 1.75rem;
+    margin-top: 2rem;
     /* padding-top: 2rem; */
 }
 
@@ -106,6 +109,32 @@ img {
 .small h3 {
     font-weight: 600;
     margin-bottom: 1rem;
+}
+.small2 {
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+    margin-bottom: 5rem;
+    margin-top: 0.5rem;
+}
+
+.small2 header {
+    line-height: 0.5;
+}
+.small2 p {
+    padding: 0.5rem;
+}
+
+.small2 h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+}
+
+#msg {
+    margin-top: 2rem;
 }
 .dark {
     background-color: rgba(255, 255, 255, .1);
@@ -153,6 +182,9 @@ form textarea:focus {
     margin: 0 1.5rem;
 
 }
+.top img {
+    width: 15%;
+}
 
 nav ul {
     display: flex;
@@ -177,24 +209,26 @@ nav ul {
 }
 
 .btn {
-    background-color: rgba(255, 255, 255, .1);
-    padding: 4px 8px;
-    border-radius: 6px;
-    color: var(--secondary-color)
+    font-size: 1.1rem;
+    background-color: rgba(2, 2, 2, 0.5);
+    padding: 16px 50px;
+    border-radius: 10px;
+    color: var(--primary-color)
 }
 .btn-mobile {
     display: none;
 }
 
 .btn:hover {
-    background-color: white;
+    background-color: var(--secondary-color);
     color: black;
     cursor: pointer;
 }
 
-.logo-image {
-    padding-top: 4rem;
-    /* margin-top: 2rem; */
+.logo-image img {
+    width: 90%;
+    /* padding-top: 4rem; */
+
 }
 
 #title {
@@ -209,17 +243,20 @@ nav ul {
 }
 
 #services {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
 #services h2 {
     text-decoration: underline;
+    padding-bottom: 2rem;
     font-weight: 600;
+    font-size: 2.5rem;
 }
 
 #services ul li {
     text-transform: capitalize;
     list-style: circle;
+    font-size: 1.2rem;
     text-align: start;  
     font-weight: 600; 
 }
@@ -241,11 +278,11 @@ nav ul {
     padding-top: 1rem;
 }
 
-.find {
-    font-size: 0.8rem;
+.medium {
+    font-size: 1.2rem;
+    /* line-height: 30px; */
     color: var(--secondary-color);
 }
-
 /* .active {
     background: #fff;
     width: 85px;
@@ -259,7 +296,7 @@ nav ul {
     display: none;
 } */
 
-@media screen and (max-width: 650px)
+@media screen and (max-width: 600px)
 {
     h1 {
         font-weight: 800;
@@ -278,6 +315,7 @@ nav ul {
     }
     h3 {
         font-weight: 300;
+        line-height: 35px;
         font-size: 1rem;
         margin: 1rem;
         padding-bottom: 1rem;
@@ -294,10 +332,44 @@ nav ul {
         align-items: center;
         justify-content: center;
         padding-bottom: 2rem;
-        padding-top: 2rem;
+        /* padding-top: 2rem; */
     }
+
+    .small header {
+        font-size: 0.5rem;
+       
+    }
+    #services ul li {
+        text-transform: capitalize;
+        list-style: circle;
+        font-size: 0.9rem;
+        text-align: start;  
+        font-weight: 600; 
+    }
+
     header nav {
         display: none;
+    }
+    header nav.active { 
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 37.5px;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+    }
+
+    header nav ul {
+        text-align: right;
+        padding: 10px 25px;
+        flex-direction: column;
+    }
+
+    .btn-mobile {
+        display: block;
+        z-index: 9999;
+        padding-top: 10px;
     }
 }
     

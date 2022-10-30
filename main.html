@@ -22,25 +22,33 @@
     </div>
     <section id="background">
       <header class="top">
-        <img src="" alt="LOGO" />
-        <nav>
+        <img src="img/logo.PNG" alt="LOGO" />
+        <nav class="main-navigation">
           <ul class="nav-links">
             <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
+          <!-- <li><a href="gallery.html">Gallery</a></li> -->
             <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="https://www.facebook.com/profile.php?id=100063998143693"></a><i class="fa-brands fa-facebook"></i></li>
             <li><a href="https://www.instagram.com/furniture_doctor77/"></a><i class="fa-brands fa-instagram"></i></li>
-            <li><a href="https://twitter.com/home"></a><i class="fa-brands fa-twitter"></i></li>
+            <li>
+              <a href="https://twitter.com/home">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
         </nav>
 
-        <a href="" class="btn-mobile"></a><i class="fa-solid fa-ellipsis-vertical"></i>
+        <a href="" class="btn-mobile">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </a>
       </header>
 
       <section class="logo-image">
         <div class="container" id="title">
-          <h1>Furniture Doctor</h1>
-          <h2>~ Upholstery repairs ~</h2>
+
+          <img src="img/logo.PNG" alt="">
+          <!-- <h1>Furniture Doctor</h1>
+          <h2>~ Upholstery repairs ~</h2> -->
         </div>
       </section>
 
@@ -61,13 +69,13 @@
     </section>
 
     <section class="dark" id="contact">
-      <div class="container small">
+      <div class="container small2">
         <header>
-          <p class="find">Contact us!</p>
+          <p class="medium">Contact us!</p>
           <h3>Let's get in touch</h3>
         </header>
 
-        <form action="" method="post">
+        <!-- <form action="" method="post">
           <div>
             <label for="contact-name">Name</label>
             <input type="text" name="contact-name" id="contact-name" />
@@ -89,16 +97,17 @@
               rows="6"
             ></textarea>
           </div>
-          <div>
-            <button class="btn">Send message</button>
-            <p class="important">
-              <em
-                >All fields required. We'll get back to you as soon as
-                possible</em
-              >
-            </p>
-          </div>
-        </form>
+          
+        </form> -->
+        <div id="msg">     
+          <a href="mailto:furnituredoctor.info@icloud.com?subject=Get%20a%20quote&body=Testing%20message"><button class="btn">Send message</button></a>
+          <p class="important">
+            <em
+              >All fields required. We'll get back to you as soon as
+              possible</em
+            >
+          </p>
+        </div>
       </div>
     </section>
 
@@ -118,4 +127,20 @@
       </div>
     </section>
   </body>
+  <script>
+  
+    let navTrigger = document.querySelectorAll('.btn-mobile')[0],
+        navContainer = document.querySelectorAll('.main-navigation')[0];
+
+      navTrigger.addEventListener('click', function(e) {
+      e.preventDefault();
+      if(navTrigger.classList.contains('active')) {
+        navTrigger.classList.remove('active')
+        navContainer.classList.remove('active')
+      } else {
+        navTrigger.classList.add('active')
+        navContainer.classList.add('active')
+      }
+    });
+  </script>
 </html>
