@@ -17,8 +17,9 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: black;
+    /* background: black; */
     color: #999;
+    background-image: url(../img/bg1.webp);
 }
 
 h1,
@@ -30,16 +31,15 @@ h4 {
 
 h1 {
     font-weight: 800;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     letter-spacing: 1px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 h2 {
     font-weight: 400;
     font-size: 1.5rem;
     margin: 1rem 0 1rem 0;
-    
 }
 
 h3 {
@@ -48,8 +48,13 @@ h3 {
     margin: 1rem;
 }
 
+h4 {
+    font-weight: 300;
+    font-size: 0.7rem;
+}
+
 p {
-    margin: 0.5rem 0;
+    color: var(--primary-color);
 }
 
 .large {
@@ -58,7 +63,8 @@ p {
 }
 
 .important {
-    font-size: .8rem;
+    font-size: .7rem;
+   margin-top: 0.8rem;
     color: rgba(255, 255, 255, 0.4)
 }
 
@@ -87,11 +93,14 @@ img {
     align-items: center;
     justify-content: center;
     padding-bottom: 2rem;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
 }
 
 .small header {
     line-height: 0.5;
+}
+.small p {
+    padding: 0;
 }
 
 .small h3 {
@@ -108,7 +117,7 @@ img {
 }
 
 form div {
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
 }
 
 form label {
@@ -117,6 +126,8 @@ form label {
     font-size: 0.6rem;
     letter-spacing: 1px;
     text-align: start;
+}
+form input {
     margin-bottom: 0.5rem;
 }
 
@@ -124,8 +135,15 @@ form input,
 form textarea {
     background-color: rgba(255, 255, 255, .1);
     border: none;
-    padding: 0.5rem;
+    padding: 0.3rem;
     width: 100%;
+    cursor: pointer;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, .2);
 }
 
 .top {
@@ -139,6 +157,23 @@ form textarea {
 nav ul {
     display: flex;
     gap: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-links li:hover a {
+    font-size: 1.2rem;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0 4px;
+    color: black;
+    transition: 0.3s;
+}
+.nav-links li:hover i {
+    font-size: 1.2rem;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0 4px;
+    color: black; 
 }
 
 .btn {
@@ -146,6 +181,9 @@ nav ul {
     padding: 4px 8px;
     border-radius: 6px;
     color: var(--secondary-color)
+}
+.btn-mobile {
+    display: none;
 }
 
 .btn:hover {
@@ -155,7 +193,8 @@ nav ul {
 }
 
 .logo-image {
-    margin-top: 2rem;
+    padding-top: 4rem;
+    /* margin-top: 2rem; */
 }
 
 #title {
@@ -169,6 +208,10 @@ nav ul {
     color: var(--secondary-color);
 }
 
+#services {
+    padding-top: 2rem;
+}
+
 #services h2 {
     text-decoration: underline;
     font-weight: 600;
@@ -177,7 +220,8 @@ nav ul {
 #services ul li {
     text-transform: capitalize;
     list-style: circle;
-    text-align: start;   
+    text-align: start;  
+    font-weight: 600; 
 }
 
 .social-icons {
@@ -185,10 +229,75 @@ nav ul {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin-top: 3rem;
-
+    margin-top: 1.5rem;
+    cursor: pointer;
 }
 
 .footer {
     padding-bottom: 1.5rem;
 }
+
+#tel {
+    padding-top: 1rem;
+}
+
+.find {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+/* .active {
+    background: #fff;
+    width: 85px;
+    height: 28px;
+    position: absolute;
+    left: 40.5%;
+    top: 0;
+    z-index: -1;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.4);
+    display: none;
+} */
+
+@media screen and (max-width: 650px)
+{
+    h1 {
+        font-weight: 800;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        font-weight: 400;
+        font-size: 1rem;
+        margin: 1rem 0 1rem 0;
+    }
+    #title h2 {
+        font-size: 1rem;
+        color: var(--secondary-color);
+    }
+    h3 {
+        font-weight: 300;
+        font-size: 1rem;
+        margin: 1rem;
+        padding-bottom: 1rem;
+    }
+    .btn {
+        background-color: rgba(255, 255, 255, .1);
+        padding: 4px 8px;
+        border-radius: 6px;
+        color: var(--secondary-color)
+    }
+    .small {
+        font-size: .9rem;
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+    header nav {
+        display: none;
+    }
+}
+    
